@@ -240,15 +240,15 @@ def index():
     <div class="trio">
       <a href="realizacje.html" class="project reveal"><span class="project-img">{img('lazienka-grafit-1', 'Łazienka w grafitowych płytkach z drewnianym blatem i podświetleniem')}</span><h3>Łazienki</h3></a>
       <a href="mozaiki.html" class="project reveal"><span class="project-img">{img('mozaika-kot-bialy', 'Mozaika z płytek: biały kot na czarnej ścianie w kuchni')}</span><h3>Mozaiki</h3></a>
-      <a href="realizacje.html" class="project reveal"><span class="project-img">{img('taras-3', 'Schody wejściowe i taras wyłożone grafitowym gresem')}</span><h3>Schody i&nbsp;tarasy</h3></a>
+      <a href="realizacje.html" class="project reveal"><span class="project-img">{img('taras-3', 'Schody wejściowe i taras wyłożone ciemnymi płytkami')}</span><h3>Schody i&nbsp;tarasy</h3></a>
     </div>
     <div class="head reveal" style="margin:clamp(80px,10vw,140px) 0 clamp(36px,5vw,60px)">
       <span class="eyebrow">Realizacje na filmie</span>
       <h2 class="h2">Zobacz z&nbsp;bliska</h2>
     </div>
     <div class="reels">
-      {reel('przed-po', '', 'Przed i po', 'Metamorfoza łazienki w jasnym kamieniu')}
-      {reel('lazienka-marmur', '', 'Łazienka w marmurze', 'Odpływ liniowy, lamele i podświetlana półka')}
+      {reel('przed-po', '', 'Przed i po', 'Metamorfoza łazienki')}
+      {reel('lazienka-marmur', '', 'Jasna łazienka', 'Odpływ liniowy, lamele i podświetlana półka')}
       {reel('lazienka-led', '', 'Grafit i LED', 'Lustra, wnęki i światło w fudze')}
     </div>
   </div>
@@ -264,7 +264,7 @@ def index():
     <div class="cards">
       <a href="realizacje.html" class="card reveal"><span class="card-img">{img('lazienka-beton-1', 'Łazienka w szarych płytkach z okrągłym lustrem LED')}</span><span class="card-body"><span class="card-no">01</span><h3>Łazienki pod klucz</h3><p>Przygotowanie ścian, płytki ścienne i&nbsp;podłogowe, odpływy liniowe, wnęki i&nbsp;półki z&nbsp;podświetleniem oraz biały montaż.</p></span></a>
       <a href="mozaiki.html" class="card reveal"><span class="card-img">{img('mozaika-twarz', 'Ponumerowane elementy mozaiki portretowej z płytek')}</span><span class="card-body"><span class="card-no">02</span><h3>Mozaiki z&nbsp;płytek</h3><p>Mozaiki artystyczne na ścianę lub posadzkę, wykonywane według obrazu, zdjęcia albo własnego pomysłu klienta.</p></span></a>
-      <a href="realizacje.html" class="card reveal"><span class="card-img">{img('schody', 'Schody wewnętrzne wyłożone płytkami imitującymi kamień')}</span><span class="card-body"><span class="card-no">03</span><h3>Schody i&nbsp;tarasy</h3><p>Okładzina schodów wewnętrznych i&nbsp;zewnętrznych oraz tarasów z&nbsp;płytek gresowych, z&nbsp;wykończeniem krawędzi i&nbsp;cokołów.</p></span></a>
+      <a href="realizacje.html" class="card reveal"><span class="card-img">{img('schody', 'Schody wewnętrzne wyłożone płytkami')}</span><span class="card-body"><span class="card-no">03</span><h3>Schody i&nbsp;tarasy</h3><p>Okładzina schodów wewnętrznych i&nbsp;zewnętrznych oraz tarasów z&nbsp;płytek gresowych, z&nbsp;wykończeniem krawędzi i&nbsp;cokołów.</p></span></a>
       <a href="realizacje.html" class="card reveal"><span class="card-img">{img('zabudowa-luk-2', 'Pomieszczenie z łukowym przejściem z płyt gipsowo-kartonowych')}</span><span class="card-body"><span class="card-no">04</span><h3>Wykończenia wnętrz</h3><p>Zabudowy z&nbsp;płyt gipsowo-kartonowych, łuki i&nbsp;ścianki działowe oraz posadzki z&nbsp;płytek wielkoformatowych.</p></span></a>
     </div>
   </div>
@@ -273,11 +273,11 @@ def index():
   <div class="wrap">
     <div class="head-row reveal">
       <div><span class="eyebrow">Przed i po</span><h2 class="h2" style="margin-top:1rem">Przesuń i&nbsp;porównaj</h2></div>
-      <p class="lead" style="max-width:44ch">Schody wejściowe i&nbsp;podest: stara okładzina zastąpiona grafitowym gresem z&nbsp;wykończonymi krawędziami.</p>
+      <p class="lead" style="max-width:44ch">Schody wejściowe i&nbsp;podest: wymiana okładziny wraz z&nbsp;wykończeniem krawędzi.</p>
     </div>
     <div class="ba reveal">
       {img('ba-taras-przed', 'Schody wejściowe przed remontem — jasne, stare płytki', mobile=False)}
-      {img('ba-taras-po', 'Schody wejściowe po remoncie — grafitowy gres', cls='ba-po', mobile=False)}
+      {img('ba-taras-po', 'Schody wejściowe po remoncie', cls='ba-po', mobile=False)}
       <span class="ba-tag l">Przed</span><span class="ba-tag r">Po</span>
       <span class="ba-line"></span><span class="ba-knob"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m9 6-6 6 6 6M15 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
       <input type="range" min="0" max="100" value="50" aria-label="Porównanie przed i po">
@@ -367,7 +367,7 @@ def mozaiki():
     <div class="process">
       <figure class="reveal"><div class="ph">{grid_art()}</div><figcaption><span class="no">01</span><h3>Projekt</h3><p>Na podstawie obrazu lub zdjęcia przygotowujemy rysunek, który dzieli motyw na pola o&nbsp;prostych krawędziach.</p></figcaption></figure>
       <figure class="reveal"><div class="ph">{img('mozaika-twarz', 'Ponumerowane elementy portretu z płytek rozłożone na podłodze')}</div><figcaption><span class="no">02</span><h3>Cięcie i&nbsp;numeracja</h3><p>Każde pole przenosimy na płytkę, wycinamy i&nbsp;oznaczamy numerem. Ten portret składa się z&nbsp;ponad 70 elementów.</p></figcaption></figure>
-      <figure class="reveal"><div class="ph">{img('mozaika-pies-detal', 'Mozaika psa z białego marmuru w trakcie fugowania')}</div><figcaption><span class="no">03</span><h3>Montaż</h3><p>Elementy układamy na ścianie lub posadzce według numeracji, pilnując równej szerokości fugi.</p></figcaption></figure>
+      <figure class="reveal"><div class="ph">{img('mozaika-pies-detal', 'Mozaika z płytek w trakcie montażu')}</div><figcaption><span class="no">03</span><h3>Montaż</h3><p>Elementy układamy na ścianie lub posadzce według numeracji, pilnując równej szerokości fugi.</p></figcaption></figure>
       <figure class="reveal"><div class="ph">{img('mozaika-kot-bialy', 'Gotowa mozaika — biały kot na czarnej ścianie w kuchni')}</div><figcaption><span class="no">04</span><h3>Efekt</h3><p>Fuga staje się konturem rysunku, a&nbsp;mozaika stałym elementem wnętrza.</p></figcaption></figure>
     </div>
   </div>
@@ -381,8 +381,8 @@ def mozaiki():
       <h2 class="h2">Mozaiki DK-FLIZ</h2>
     </div>
     <div class="mz-gallery">
-      <a href="img/mozaika-kot-czarny.webp" data-lb class="mz-item a reveal">{img('mozaika-kot-czarny', 'Czarny kot z płytek łupkowych na białej ścianie')}<span class="cap">Kot z łupka</span></a>
-      <a href="img/mozaika-pies.webp" data-lb class="mz-item b reveal">{img('mozaika-pies', 'Mozaika psa z marmurowych płytek w czarnej ramie')}<span class="cap">Pies w marmurze — mozaika według obrazu</span></a>
+      <a href="img/mozaika-kot-czarny.webp" data-lb class="mz-item a reveal">{img('mozaika-kot-czarny', 'Mozaika z płytek — kot na białej ścianie')}<span class="cap">Mozaika — kot</span></a>
+      <a href="img/mozaika-pies.webp" data-lb class="mz-item b reveal">{img('mozaika-pies', 'Mozaika z płytek na podstawie obrazu')}<span class="cap">Mozaika na podstawie obrazu</span></a>
       <a href="img/mozaika-twarz.webp" data-lb class="mz-item c reveal" style="aspect-ratio:4/3">{img('mozaika-twarz', 'Portret z szarych płytek w trakcie przygotowania')}<span class="cap">Portret — przygotowanie elementów</span></a>
       <a href="img/mozaika-kot-bialy.webp" data-lb class="mz-item d reveal">{img('mozaika-kot-bialy', 'Biały kot z płytek na czarnej ścianie kuchni')}<span class="cap">Biały kot w kuchni</span></a>
     </div>
@@ -408,12 +408,12 @@ def mozaiki():
 
 # ---------------------------------------------------------------- realizacje
 GALLERY = [
-    ('lazienka-grafit-1', 'lazienki', 'Łazienka w grafitowym kamieniu z drewnianym blatem'),
+    ('lazienka-grafit-1', 'lazienki', 'Łazienka z drewnianym blatem i podświetleniem'),
     ('mozaika-kot-czarny', 'mozaiki', 'Mozaika — czarny kot'),
     ('lazienka-granat', 'lazienki', 'Łazienka z kabiną i lustrem LED'),
-    ('taras-1', 'schody', 'Schody wejściowe z grafitowego gresu'),
+    ('taras-1', 'schody', 'Schody wejściowe po remoncie'),
     ('lazienka-tropik', 'lazienki', 'Łazienka z tapetą w liście i podświetlanym lustrem'),
-    ('mozaika-pies', 'mozaiki', 'Mozaika psa z marmurowych płytek'),
+    ('mozaika-pies', 'mozaiki', 'Mozaika na podstawie obrazu'),
     ('kabina-led-1', 'lazienki', 'Kabina prysznicowa z podświetlanymi półkami'),
     ('lazienka-beton-1', 'lazienki', 'Łazienka w szarych płytkach z okrągłym lustrem'),
     ('schody', 'schody', 'Schody wewnętrzne w płytkach'),
@@ -421,7 +421,7 @@ GALLERY = [
     ('mozaika-kot-bialy', 'mozaiki', 'Mozaika — biały kot w kuchni'),
     ('poddasze-1', 'lazienki', 'Łazienka na poddaszu'),
     ('lazienka-grafit-3', 'lazienki', 'Łazienka w grafitowych płytkach'),
-    ('taras-3', 'schody', 'Podest i schody z gresu'),
+    ('taras-3', 'schody', 'Podest i schody wejściowe'),
     ('lazienka-drewno', 'lazienki', 'Łazienka z wanną i płytkami drewnopodobnymi'),
     ('mozaika-twarz', 'mozaiki', 'Portret z płytek — elementy ponumerowane'),
     ('lazienka-beton-2', 'lazienki', 'Łazienka z wanną narożną'),
@@ -434,7 +434,7 @@ GALLERY = [
     ('lazienka-zielen-1', 'lazienki', 'Prysznic z zieloną ścianką'),
     ('zabudowa-luk-2', 'wnetrza', 'Łukowe przejście z płyt g-k'),
     ('lazienka-beton-3', 'lazienki', 'Łazienka z lustrem LED i wanną'),
-    ('mozaika-pies-detal', 'mozaiki', 'Mozaika psa — detal'),
+    ('mozaika-pies-detal', 'mozaiki', 'Mozaika na podstawie obrazu — detal'),
     ('pokoj-2', 'wnetrza', 'Pomieszczenie przygotowane pod wykończenie'),
     ('zabudowa-luk-1', 'wnetrza', 'Zabudowa z łukiem w trakcie prac'),
     ('trakcie-1', 'trakcie', 'Płytki drewnopodobne pod prysznicem — w trakcie'),
@@ -481,8 +481,8 @@ def realizacje():
       <h2 class="h2">Realizacje na filmie</h2>
     </div>
     <div class="reels">
-      {reel('przed-po', '', 'Przed i po', 'Metamorfoza łazienki w jasnym kamieniu')}
-      {reel('lazienka-marmur', '', 'Łazienka w marmurze', 'Odpływ liniowy, lamele i podświetlana półka')}
+      {reel('przed-po', '', 'Przed i po', 'Metamorfoza łazienki')}
+      {reel('lazienka-marmur', '', 'Jasna łazienka', 'Odpływ liniowy, lamele i podświetlana półka')}
       {reel('lazienka-beton', '', 'Beton i drewno', 'Kilka łazienek w jednym filmie')}
     </div>
   </div>
