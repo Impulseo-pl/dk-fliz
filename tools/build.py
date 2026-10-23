@@ -157,10 +157,8 @@ def reel(video, poster, title, sub):
 def final_cta():
     return f'''{shards('var(--paper)', 'var(--dark)')}
 <section class="sec dark final">
-  <svg class="final-shard a" viewBox="0 0 200 200" aria-hidden="true"><polygon points="0,20 150,0 90,140" fill="#A3582F" opacity=".22"/><polygon points="96,148 156,6 200,120" fill="#ECE7DF" opacity=".05"/></svg>
-  <svg class="final-shard b" viewBox="0 0 200 200" aria-hidden="true"><polygon points="40,40 200,0 160,170" fill="#ECE7DF" opacity=".06"/><polygon points="34,50 152,176 0,200" fill="#A3582F" opacity=".2"/></svg>
   <div class="wrap reveal">
-    <span class="eyebrow">Wolne terminy na końcówkę 2026 r.</span>
+    <span class="eyebrow">Bezpłatna wycena</span>
     <h2 class="h2" style="margin-top:1.2rem">Porozmawiajmy o&nbsp;Twojej łazience</h2>
     <a href="tel:{TEL_H}" class="final-tel">{TEL}</a>
     <div class="final-actions"><a href="tel:{TEL_H}" class="pill pill-light">Zadzwoń teraz</a><a href="kontakt.html" class="more" style="color:var(--on-dark)">Napisz wiadomość <span class="arr">→</span></a></div>
@@ -186,7 +184,6 @@ def index():
       <path d="M74 52 L84 100"/>
     </svg>
   </div>
-  <div class="slot"><i></i><span><b>2 wolne terminy</b>do końca 2026 roku</span></div>
   <div class="wrap hero-inner">
     <div class="hero-copy">
       <span class="eyebrow">Maków Podhalański · Małopolska</span>
@@ -196,7 +193,7 @@ def index():
         <a href="kontakt.html" class="pill">Bezpłatna wycena</a>
         <a href="tel:{TEL_H}" class="tel">{ICO_TEL} {TEL}</a>
       </div>
-      <ul class="trust"><li>Jedno zlecenie naraz</li><li>Kraków · Wadowice · Sucha Beskidzka</li><li>Wycena przed rozpoczęciem prac</li></ul>
+      <ul class="trust"><li>Bezpłatna wycena</li><li>Kraków · Wadowice · Sucha Beskidzka</li><li>Mozaiki według obrazu</li></ul>
     </div>
   </div>
 </section>
@@ -224,7 +221,6 @@ def index():
       <span class="eyebrow">Znak rozpoznawczy</span>
       <h2 class="h2">Mozaika z&nbsp;płytek na podstawie <em>obrazu</em></h2>
       <p class="lead">Każdy projekt zaczyna się od obrazu lub zdjęcia. Motyw dzielimy na pola, a&nbsp;następnie wycinamy z&nbsp;płytek i&nbsp;numerujemy kolejne elementy. Na ścianie lub posadzce składają się one w&nbsp;jeden obraz, a&nbsp;fuga wyznacza jego kontur.</p>
-      <p class="lead">To rzadko spotykana specjalizacja — w&nbsp;Polsce wykonuje ją niewiele osób.</p>
       <div class="mz-facts">
         <div><b>70+</b><span>elementów w&nbsp;jednym portrecie</span></div>
         <div><b>100%</b><span>cięte i&nbsp;dopasowane ręcznie</span></div>
@@ -263,7 +259,7 @@ def index():
     <div class="head reveal">
       <span class="eyebrow">Usługi</span>
       <h2 class="h2">Zakres prac</h2>
-      <p class="lead">Prowadzimy całe wykończenie albo wchodzimy na wybrany etap. Większe realizacje, jak wykończenie całego domu, planujemy na dwa do trzech miesięcy.</p>
+      <p class="lead">Prowadzimy całe wykończenie albo wchodzimy na wybrany etap.</p>
     </div>
     <div class="cards">
       <a href="realizacje.html" class="card reveal"><span class="card-img">{img('lazienka-beton-1', 'Łazienka w szarych płytkach z okrągłym lustrem LED')}</span><span class="card-body"><span class="card-no">01</span><h3>Łazienki pod klucz</h3><p>Przygotowanie ścian, płytki ścienne i&nbsp;podłogowe, odpływy liniowe, wnęki i&nbsp;półki z&nbsp;podświetleniem oraz biały montaż.</p></span></a>
@@ -306,7 +302,7 @@ def index():
     <ol class="steps">
       <li class="reveal"><span class="no">01</span><h3>Rozmowa</h3><p>Zadzwoń pod numer {TEL} i&nbsp;opisz zakres prac. Najwięcej da się ustalić w&nbsp;bezpośredniej rozmowie.</p></li>
       <li class="reveal"><span class="no">02</span><h3>Oględziny i&nbsp;wycena</h3><p>Przyjeżdżamy na miejsce, mierzymy pomieszczenie i&nbsp;omawiamy płytki, rozwiązania oraz koszt prac.</p></li>
-      <li class="reveal"><span class="no">03</span><h3>Termin</h3><p>Ustalamy datę rozpoczęcia. Prowadzimy jedno zlecenie naraz, dlatego liczba terminów w&nbsp;roku jest ograniczona.</p></li>
+      <li class="reveal"><span class="no">03</span><h3>Termin</h3><p>Ustalamy datę rozpoczęcia prac i&nbsp;ich harmonogram, tak aby klient wiedział, czego i&nbsp;kiedy się spodziewać.</p></li>
       <li class="reveal"><span class="no">04</span><h3>Realizacja i&nbsp;odbiór</h3><p>Pracujemy do momentu, w&nbsp;którym każdy detal jest dopracowany, a&nbsp;klient zadowolony z&nbsp;efektu.</p></li>
     </ol>
   </div>
@@ -317,7 +313,7 @@ def index():
     <div class="reveal">
       <span class="eyebrow">O nas</span>
       <h2 class="h2" style="margin:1.2rem 0 1.4rem">Rób tak, jak dla siebie</h2>
-      <p class="lead">Firmę prowadzi Patryk — glazurnik, który najbardziej lubi wykańczać łazienki. Na co dzień pracuje osobiście i&nbsp;skupia się na jednej realizacji w&nbsp;miesiącu, a&nbsp;przy większych zleceniach, takich jak wykończenie całego domu, pracuje z&nbsp;zaufaną pomocą.</p>
+      <p class="lead">DK-fliz Usługi Glazurnicze i&nbsp;Wykończeniowe to firma z&nbsp;Makowa Podhalańskiego, specjalizująca się w&nbsp;kompleksowym wykończeniu łazienek oraz w&nbsp;mozaikach z&nbsp;płytek. Wykonujemy także remonty mieszkań i&nbsp;domów, schodów oraz tarasów.</p>
       <p class="lead" style="margin-top:1rem">Od października 2026 r. realizujemy usługi glazurnicze i&nbsp;wykończeniowe na terenie województwa małopolskiego.</p>
       <div class="hero-actions"><a href="tel:{TEL_H}" class="pill">Zadzwoń: {TEL}</a></div>
     </div>
