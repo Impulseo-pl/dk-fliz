@@ -19,44 +19,6 @@
   },{threshold:.12,rootMargin:'0px 0px -40px 0px'}):null;
   $$('.reveal').forEach(function(el){io?io.observe(el):el.classList.add('is-in')});
 
-  /* mozaika składana z odłamków: siatka z przesuniętymi węzłami, każdy czworokąt = 2 trójkąty */
-  $$('.mz-assemble').forEach(function(box){
-    var img=$('img',box);if(!img)return;
-    var src=img.currentSrc||img.src,cols=+box.dataset.cols||5,rows=+box.dataset.rows||7;
-    var seed=7;var rnd=function(){seed=(seed*9301+49297)%233280;return seed/233280};
-    var P=[];
-    for(var r=0;r<=rows;r++){P[r]=[];for(var c=0;c<=cols;c++){
-      var x=c/cols*100,y=r/rows*100;
-      if(c>0&&c<cols)x+=(rnd()-.5)*(70/cols);
-      if(r>0&&r<rows)y+=(rnd()-.5)*(70/rows);
-      P[r][c]=[x,y];
-    }}
-    var shrink=function(t){ /* odsunięcie od środka = fuga */
-      var cx=(t[0][0]+t[1][0]+t[2][0])/3,cy=(t[0][1]+t[1][1]+t[2][1])/3;
-      return t.map(function(p){return [cx+(p[0]-cx)*.982,cy+(p[1]-cy)*.982]});
-    };
-    var frag=document.createDocumentFragment(),i=0;
-    for(var r2=0;r2<rows;r2++)for(var c2=0;c2<cols;c2++){
-      var a=P[r2][c2],b=P[r2][c2+1],d=P[r2+1][c2],e=P[r2+1][c2+1];
-      var tris=rnd()>.5?[[a,b,e],[a,e,d]]:[[a,b,d],[b,e,d]];
-      tris.forEach(function(t){
-        t=shrink(t);
-        var pc=document.createElement('span');pc.className='pc';
-        pc.style.backgroundImage='url("'+src+'")';
-        pc.style.clipPath='polygon('+t.map(function(p){return p[0].toFixed(2)+'% '+p[1].toFixed(2)+'%'}).join(',')+')';
-        if(!reduce){
-          pc.style.transform='translate('+((rnd()-.5)*60).toFixed(1)+'px,'+((rnd()*-50)-20).toFixed(1)+'px) rotate('+((rnd()-.5)*24).toFixed(1)+'deg)';
-          pc.style.transitionDelay=(i*16+rnd()*120).toFixed(0)+'ms';
-        }
-        pc.dataset.t=pc.style.transform;frag.appendChild(pc);i++;
-      });
-    }
-    box.appendChild(frag);box.classList.add('has-js');
-    var place=function(){box.classList.add('is-in');$$('.pc',box).forEach(function(p){p.style.transform='none'})};
-    if(reduce||!('IntersectionObserver' in window)){place();return}
-    new IntersectionObserver(function(es,o){es.forEach(function(e){if(e.isIntersecting){place();o.disconnect()}})},{threshold:.35}).observe(box);
-  });
-
   /* filmy: odtwarzanie w kadrze, klik = pauza */
   $$('.reel').forEach(function(r){
     var v=$('video',r),btn=$('.reel-play',r);if(!v)return;

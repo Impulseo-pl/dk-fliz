@@ -216,7 +216,7 @@ def index():
 {shards('var(--dark)', 'var(--paper)')}
 <section class="sec">
   <div class="wrap mz-split">
-    <div class="mz-assemble reveal" data-cols="4" data-rows="5">{img('mozaika-kot-czarny', 'Mozaika z płytek — czarny kot na białej ścianie', mobile=False)}</div>
+    <div class="mz-photo reveal">{img('mozaika-kot-czarny', 'Mozaika z płytek — czarny kot na białej ścianie', mobile=False)}</div>
     <div class="mz-copy reveal">
       <span class="eyebrow">Znak rozpoznawczy</span>
       <h2 class="h2">Mozaika z&nbsp;płytek na podstawie <em>obrazu</em></h2>
@@ -391,7 +391,7 @@ def mozaiki():
 {shards('var(--dark)', 'var(--paper)')}
 <section class="sec">
   <div class="wrap mz-split">
-    <div class="mz-assemble reveal" data-cols="4" data-rows="6">{img('mozaika-kot-bialy-2', 'Mozaika z płytek — biały kot', mobile=False)}</div>
+    <div class="mz-photo reveal">{img('mozaika-kot-bialy-2', 'Mozaika z płytek — biały kot', mobile=False)}</div>
     <div class="mz-copy reveal">
       <span class="eyebrow">Twój motyw</span>
       <h2 class="h2">Masz obraz, który chcesz przenieść na <em>ścianę</em>?</h2>

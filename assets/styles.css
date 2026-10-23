@@ -335,7 +335,7 @@ footer h4{font-family:var(--sans);font-size:.74rem;letter-spacing:.2em;text-tran
   .hero-inner{padding-block:24px 64px}
   .slot{right:16px;bottom:auto;top:calc(78px + 46svh - 120px)}
   .mz-split,.contact-grid,.pagehead-grid{grid-template-columns:1fr}
-  .mz-assemble{max-width:520px;width:100%;margin-inline:auto}
+  .mz-photo{max-width:520px;width:100%;margin-inline:auto}
   .pagehead{padding-top:118px}
   .pagehead-art{min-height:300px;margin-inline:calc(var(--gutter) * -1);clip-path:polygon(0 14%,62% 0,100% 10%,100% 100%,0 100%)}
   .pagehead-copy{padding-bottom:0}
