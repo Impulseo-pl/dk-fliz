@@ -251,6 +251,7 @@ def index():
       {reel('lazienka-marmur', '', 'Jasna łazienka', 'Odpływ liniowy, lamele i podświetlana półka')}
       {reel('lazienka-led', '', 'Grafit i LED', 'Lustra, wnęki i światło w fudze')}
     </div>
+    <div class="reels-more reveal"><a href="{FB}" target="_blank" rel="noopener" class="pill pill-light">{ICO_FB} Zobacz więcej na Facebooku</a></div>
   </div>
 </section>
 {shards('var(--dark)', 'var(--paper-2)')}
@@ -485,6 +486,7 @@ def realizacje():
       {reel('lazienka-marmur', '', 'Jasna łazienka', 'Odpływ liniowy, lamele i podświetlana półka')}
       {reel('lazienka-beton', '', 'Beton i drewno', 'Kilka łazienek w jednym filmie')}
     </div>
+    <div class="reels-more reveal"><a href="{FB}" target="_blank" rel="noopener" class="pill pill-light">{ICO_FB} Zobacz więcej na Facebooku</a></div>
   </div>
 </section>
 {shards('var(--dark)', 'var(--paper)')}

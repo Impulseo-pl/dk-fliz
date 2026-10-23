@@ -390,3 +390,5 @@ footer .brand-mark path{stroke:var(--dark)}
 .on-dark .nav:not(.is-scrolled):not(.is-open) .nav-toggle{background:var(--paper)}
 .on-dark .nav:not(.is-scrolled):not(.is-open) .nav-toggle span{background:var(--ink)}
 @media (max-width:600px){.h1{font-size:clamp(2.2rem,10vw,2.9rem)}}
+.reels-more{text-align:center;margin-top:clamp(32px,4vw,52px)}
+.reels-more .pill svg{width:18px;height:18px}
