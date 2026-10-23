@@ -82,7 +82,7 @@ button{font:inherit;cursor:pointer}
 .hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:center;overflow:hidden;background:var(--paper)}
 .hero-art{position:absolute;top:0;right:0;bottom:0;width:55%;clip-path:polygon(36% 0,100% 0,100% 100%,24% 100%,0 62%,14% 40%)}
 .hero-art video,.hero-art img{width:100%;height:100%;object-fit:cover}
-.grout{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.grout{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;overflow:visible}
 .grout path{fill:none;stroke:var(--grout);stroke-width:5;vector-effect:non-scaling-stroke;stroke-linejoin:round;stroke-linecap:round;opacity:0;animation:fade .9s var(--ease) forwards}
 .grout path:nth-of-type(2){animation-delay:.15s}.grout path:nth-of-type(3){animation-delay:.3s}.grout path:nth-of-type(4){animation-delay:.45s}.grout path:nth-of-type(5){animation-delay:.6s}.grout path:nth-of-type(6){animation-delay:.75s}
 .grout polygon{opacity:0;animation:fade 1.2s .9s var(--ease) forwards}
@@ -380,13 +380,10 @@ footer h4{font-family:var(--sans);font-size:.74rem;letter-spacing:.2em;text-tran
 }
 
 /* znak — płytka z odłamków, fuga w kolorze tła */
-.brand-mark path{stroke:var(--paper);stroke-width:2.4;stroke-linejoin:round}
-footer .brand-mark path{stroke:var(--dark)}
 .about-img{aspect-ratio:4/5;max-height:640px;width:100%;clip-path:polygon(14% 0,100% 0,100% 100%,0 100%,0 18%);border-radius:4px;overflow:hidden}
 .about-img img{width:100%;height:100%;object-fit:cover}
 .on-dark .nav:not(.is-scrolled):not(.is-open) .brand-name{color:var(--on-dark)}
 .on-dark .nav:not(.is-scrolled):not(.is-open) .brand-sub{color:var(--on-dark-muted)}
-.on-dark .nav:not(.is-scrolled):not(.is-open) .brand-mark path{stroke:var(--dark)}
 .on-dark .nav:not(.is-scrolled):not(.is-open) .nav-toggle{background:var(--paper)}
 .on-dark .nav:not(.is-scrolled):not(.is-open) .nav-toggle span{background:var(--ink)}
 @media (max-width:600px){.h1{font-size:clamp(2.2rem,10vw,2.9rem)}}

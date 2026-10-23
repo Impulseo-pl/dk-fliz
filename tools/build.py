@@ -39,10 +39,12 @@ STAR = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3 6.6 7.2.8-5
 PLAY = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l12-7.5Z" fill="currentColor"/></svg>'
 
 MARK = ('<svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true">'
-        '<path d="M2 2H38L24 17Z" fill="#17181B"/>'
-        '<path d="M38 2V38L24 17Z" fill="#A3582F"/>'
-        '<path d="M38 38H2L24 17Z" fill="#8E8A84"/>'
-        '<path d="M2 38V2L24 17Z" fill="#3A3B40"/></svg>')
+        '<defs><linearGradient id="kb" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#7C828A"/><stop offset=".55" stop-color="#D9DCE0"/><stop offset="1" stop-color="#9AA0A7"/></linearGradient>'
+        '<linearGradient id="kr" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#9E1A20"/><stop offset=".5" stop-color="#D8323A"/><stop offset="1" stop-color="#B0222A"/></linearGradient></defs>'
+        '<path d="M2 38 7.5 15.5 24.5 32.5Z" fill="url(#kb)" stroke="#3E434A" stroke-width="1" stroke-linejoin="round"/>'
+        '<path d="M16 24 20.5 19.5 22 21 26 17" fill="none" stroke="#5A6068" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>'
+        '<rect x="22.5" y="6.5" width="19" height="7.4" rx="3.7" transform="rotate(-45 32 10.2)" fill="url(#kr)"/>'
+        '</svg>')
 
 
 def shards(top, bottom, flip=False):
@@ -176,12 +178,12 @@ def index():
       <polygon points="48,30 74,52 36,64" fill="rgba(255,255,255,.07)"/>
       <polygon points="74,52 100,74 100,100 84,100" fill="rgba(0,0,0,.2)"/>
       <polygon points="56,0 100,0 100,22 48,30" fill="rgba(0,0,0,.14)"/>
-      <path d="M56 0 L48 30 L15 40"/>
-      <path d="M48 30 L74 52 L100 22"/>
-      <path d="M74 52 L36 64 L0 60"/>
-      <path d="M48 30 L36 64 L58 100"/>
-      <path d="M74 52 L100 74"/>
-      <path d="M74 52 L84 100"/>
+      <path d="M57 -5 L48 30 L-5 46"/>
+      <path d="M48 30 L74 52 L105 16"/>
+      <path d="M74 52 L36 64 L-5 59.4"/>
+      <path d="M48 30 L36 64 L61 105"/>
+      <path d="M74 52 L105 78"/>
+      <path d="M74 52 L85 105"/>
     </svg>
   </div>
   <div class="wrap hero-inner">
@@ -564,7 +566,7 @@ def kontakt():
 if __name__ == '__main__':
     with open(os.path.join(ROOT, 'img', 'favicon.svg'), 'w') as f:
         f.write('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><rect width="40" height="40" rx="8" fill="#EEEAE3"/>'
-                + MARK.split('aria-hidden="true">')[1].replace('</svg>', '').replace('/>', ' stroke="#EEEAE3" stroke-width="2.4"/>') + '</svg>')
+                + MARK.split('aria-hidden="true">')[1].replace('</svg>', '') + '</svg>')
     for fn, html in (('index.html', index()), ('mozaiki.html', mozaiki()), ('realizacje.html', realizacje()), ('kontakt.html', kontakt())):
         with open(os.path.join(ROOT, fn), 'w') as f:
             f.write(html)
