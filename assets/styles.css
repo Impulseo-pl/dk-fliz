@@ -126,13 +126,10 @@ button{font:inherit;cursor:pointer}
 .feature-ttl{display:block;font-family:var(--serif);font-size:clamp(1.6rem,1.2rem + 1.4vw,2.5rem);font-weight:600;text-transform:uppercase;line-height:1}
 .feature-sub{display:block;margin-top:.6rem;color:rgba(255,255,255,.78)}
 
-/* mozaika składana z odłamków */
+/* mozaika — zdjęcie + opis */
 .mz-split{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(36px,6vw,96px);align-items:center}
-.mz-assemble{position:relative;aspect-ratio:3/4;background:var(--ink-soft);border-radius:4px;overflow:hidden}
-.mz-assemble .pc{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform 1.1s var(--ease),opacity .8s var(--ease);will-change:transform}
-.mz-assemble:not(.is-in) .pc{opacity:0}
-.mz-assemble img{width:100%;height:100%;object-fit:cover}
-.mz-assemble.has-js img{visibility:hidden}
+.mz-photo{aspect-ratio:3/4;overflow:hidden;border-radius:4px}
+.mz-photo img{width:100%;height:100%;object-fit:cover}
 .mz-copy .h2{margin:1.2rem 0 1.4rem}
 .mz-copy .lead+.lead{margin-top:1rem}
 .mz-facts{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:2.2rem 0;border-top:1px solid var(--line);padding-top:1.6rem}
